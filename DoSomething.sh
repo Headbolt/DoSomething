@@ -27,11 +27,8 @@
 #
 ###############################################################################################################################################
 #
-# Grabs the Command or Program to Execute from JAMF variable #4 eg. /Applications/Program.app
-Command=$4
-#
-# Set the name of the script for later logging
-ScriptName="append prefix here as needed - Run Command Or Program"
+Command=$4 # Grabs the Command or Program to Execute from JAMF variable #4 eg. /Applications/Program.app
+ScriptName="append prefix here as needed - Run Command Or Program" # Set the name of the script for later logging
 #
 ###############################################################################################################################################
 #
