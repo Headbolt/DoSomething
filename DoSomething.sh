@@ -15,11 +15,14 @@
 #
 # HISTORY
 #
-#   Version: 1.1 - 02/03/2021
+#   Version: 1.2 - 03/03/2021
 #
 #   - 29/13/2018 - V1.0 - Created by Headbolt
 #
 #   - 02/03/2021 - V1.1 - Updated by Headbolt
+#
+#   - 03/03/2021 - V1.2 - Updated by Headbolt
+#							Few Issues fixed in update
 #
 ###############################################################################################################################################
 #
@@ -27,7 +30,7 @@
 #
 ###############################################################################################################################################
 #
-Command=$4 # Grabs the Command or Program to Execute from JAMF variable #4 eg. /Applications/Program.app
+Command=${4} # Grabs the Command or Program to Execute from JAMF variable #4 eg. /Applications/Program.app
 ScriptName="append prefix here as needed - Run Command Or Program" # Set the name of the script for later logging
 #
 ###############################################################################################################################################
@@ -74,7 +77,11 @@ ScriptEnd(){
 #
 SectionEnd
 #
-$Command
+/bin/echo "Command being run is :"
+/bin/echo '"'$Command'"'
+/bin/echo # Outputting a Blank Line for Reporting Purposes
+#
+eval $Command
 #
 SectionEnd
 ScriptEnd
